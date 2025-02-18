@@ -1,5 +1,5 @@
 /**
- * @version 11
+ * @version 12
  *
  */
  package com.orasi;
@@ -245,6 +245,27 @@ if ( targetElement == null ) {
 }
 
 
+ if ( variableMap != null ) {
+   variableMap.clear();
+ }
+}
+
+ /**
+ * Allows the script developer to wait for a supported action
+ */
+ public static void Wait_For_v1( int executionId, int stepIdentifier, int testExecutionId, WebDriver webDriver, Map<String,Object> variableMap, Map<String,Object> contextMap, String contextName, Stack<String> callStack, Stack<Integer> stepStack )
+ {
+ 
+   String condition = (String) variableMap.get( "condition" );
+ 
+   By targetLocator = (By) variableMap.get( "targetLocator" );
+ 
+   Long timeOut = null;
+   Number _timeOut = (Number) variableMap.get( "timeOut" );
+   if ( _timeOut != null ) timeOut = _timeOut.longValue();
+ 
+
+ WebDriverWait wait = new WebDriverWait( webDriver,Duration.ofMillis(timeOut ), Duration.ofMillis( 250 ) );      WebElement webElement = null;      boolean returnValue = false;      try {        switch ( condition ) {          case "Clickable":            webElement = wait.until( new Function<WebDriver, WebElement>()            {                @Override              public WebElement apply( WebDriver webDriver )              {                return ExpectedConditions.elementToBeClickable( targetLocator ).apply( webDriver );              }              } );              break;            case "Invisible":            returnValue = wait.until( new Function<WebDriver, Boolean>()            {                @Override              public Boolean apply( WebDriver webDriver )              {                return ExpectedConditions.invisibilityOfElementLocated( targetLocator ).apply( webDriver );              }              } );            break;            case "Present":            webElement = wait.until( new Function<WebDriver, WebElement>()            {                @Override              public WebElement apply( WebDriver webDriver )              {                return ExpectedConditions.presenceOfElementLocated( targetLocator ).apply( webDriver );              }              } );              break;            case "Selected":            returnValue = wait.until( new Function<WebDriver, Boolean>()            {                @Override              public Boolean apply( WebDriver webDriver )              {                return ExpectedConditions.elementToBeSelected( targetLocator ).apply( webDriver );              }              } );            break;            case "Visible":            webElement = wait.until( new Function<WebDriver, WebElement>()            {                @Override              public WebElement apply( WebDriver webDriver )              {                return ExpectedConditions.visibilityOfElementLocated( targetLocator ).apply( webDriver );              }              } );            break;            case "Frame Exists":            webElement = wait.until( new Function<WebDriver, WebElement>()            {                @Override              public WebElement apply( WebDriver webDriver )              {                try {                  WebElement webElement = webDriver.findElement( targetLocator );                  webDriver.switchTo().frame( webElement );                  return webElement;                } catch ( Exception e ) {                    return null;                }              }              } );            break;            case "Clickable then Click":            webElement = wait.until( new Function<WebDriver, WebElement>()            {                @Override              public WebElement apply( WebDriver webDriver )              {                return ExpectedConditions.elementToBeClickable( targetLocator ).apply( webDriver );              }              } );            webElement.click();            break;        }      } catch ( Throwable t ) {        throw new IllegalArgumentException( "Could not locate " + targetLocator + " with the condition met as " + condition, t );      }        if ( contextName != null ) {        contextMap.put( contextName + "_element", webElement );        contextMap.put( contextName + "_found", returnValue );      }      /* end report here */
  if ( variableMap != null ) {
    variableMap.clear();
  }
