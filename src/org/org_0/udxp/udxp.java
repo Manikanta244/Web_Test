@@ -1,5 +1,5 @@
 /**
-  * @version 11
+  * @version 12
   */
  package org.org_0.udxp;
 
@@ -28,7 +28,7 @@
    Map<String,FunctionVariableWrapper> ingressSignature = new HashMap<>( 5 );;
 
    public udxp() {
-     super(15577, "27861.2223", "UDXP", "Add a description of UDXP", 0, "", "".split(","), "{\"symphonyId\":0,\"id\":15577,\"name\":\"UDXP\",\"description\":\"Add a description of UDXP\",\"userId\":362,\"userConfidence\":0,\"organizationId\":0,\"organizationConfidence\":0,\"status\":1,\"reviewFlag\":0,\"createDate\":\"Feb 14, 2025, 11:59:11 AM\",\"modifyDate\":\"Feb 18, 2025, 6:39:12 PM\",\"version\":11,\"lockUserId\":0,\"level\":1,\"pre\":\"\",\"post\":\"\",\"deviceTagNames\":\"\",\"changeCount\":0,\"uniqueContributors\":0,\"stepCount\":0,\"testUserConfidence\":0.0,\"errorHandler\":\"\",\"classificationId\":0,\"synchronizationId\":0,\"storageVersion\":2,\"alchemyId\":2223,\"alchemySeed\":27861,\"referenceSuiteID\":0,\"signature\":\"null\",\"acls\":[],\"changed\":false}");
+     super(15577, "27861.2223", "UDXP", "Add a description of UDXP", 0, "", "".split(","), "{\"symphonyId\":0,\"id\":15577,\"name\":\"UDXP\",\"description\":\"Add a description of UDXP\",\"userId\":362,\"userConfidence\":0,\"organizationId\":0,\"organizationConfidence\":0,\"status\":1,\"reviewFlag\":0,\"createDate\":\"Feb 14, 2025, 11:59:11 AM\",\"modifyDate\":\"Feb 18, 2025, 6:52:36 PM\",\"version\":12,\"lockUserId\":0,\"level\":1,\"pre\":\"\",\"post\":\"\",\"deviceTagNames\":\"\",\"changeCount\":0,\"uniqueContributors\":0,\"stepCount\":0,\"testUserConfidence\":0.0,\"errorHandler\":\"\",\"classificationId\":0,\"synchronizationId\":0,\"storageVersion\":2,\"alchemyId\":2223,\"alchemySeed\":27861,\"referenceSuiteID\":0,\"signature\":\"null\",\"acls\":[],\"changed\":false}");
    }
 
    private void sleep( long sleepTime ) {
@@ -397,22 +397,6 @@
         vM.addVariable( new VariableWrapper( "ingressSignature", ingressSignature, "" ) );
       }
       eventList.add( aM.executeAction( "Type_v2", "", 1, vM.generateVariables(), vM.generateVariableDefinitions(), "{\"templateImplId\":85,\"checkpointId\":1,\"alchemyId\":1463,\"alchemySeed\":27925,\"pauseBefore\":0,\"waitFor\":5000,\"pauseAfter\":0,\"variableList\":[{\"value\":\"1\",\"inputId\":31,\"templateId\":0,\"inputName\":\"value\",\"inputDescription\":\"The text to type\",\"inputData\":\"null\",\"inputTypeId\":1,\"inputRequired\":1,\"status\":1,\"changed\":false},{\"value\":\"true\",\"inputId\":32,\"templateId\":0,\"inputName\":\"clearFirst\",\"inputDescription\":\"A flag indicating if the value should first be cleared\",\"inputData\":\"null\",\"inputTypeId\":4,\"inputRequired\":1,\"status\":1,\"changed\":false},{\"value\":\"27861.2439\",\"inputId\":33,\"templateId\":0,\"inputName\":\"targetLocator\",\"inputDescription\":\"The element that will receive the text\",\"inputTypeId\":5,\"inputRequired\":1,\"status\":1,\"changed\":false}],\"functionVariables\":[],\"status\":1,\"actionId\":17,\"parentId\":0,\"endpointId\":1,\"templateId\":0,\"tversion\":2,\"tstyleId\":1,\"tstatus\":1,\"verifiedBy\":0,\"onFailure\":1,\"invertResult\":false,\"actionDisplay\":\"Type {var:value} into {var:targetLocator}\",\"changed\":false}", stepStack.peek(), (t4) -> {  return null; }, false, 0, 5000, 0, 1 ) );
-      
-      vM.clear();
-
-      ingressSignature.clear();
-      
-
-      vM.addVariable( createVariable( "condition", 10, true, "Visible", dS, contextMap, webDriver ) );
-      vM.addVariable( createVariable( "targetLocator", 5, true, "27861.2492", dS, contextMap, webDriver ) );
-      vM.addVariable( createVariable( "timeOut", 2, true, "8000", dS, contextMap, webDriver ) );
-      
-
-      if ( !ingressSignature.isEmpty() ) {
-	vM.addVariable( new VariableWrapper( "__dS", dS, "" ) );
-        vM.addVariable( new VariableWrapper( "ingressSignature", ingressSignature, "" ) );
-      }
-      eventList.add( aM.executeAction( "Wait_For_v1", "", 1, vM.generateVariables(), vM.generateVariableDefinitions(), "{\"templateImplId\":4,\"checkpointId\":1,\"alchemyId\":8753,\"alchemySeed\":28036,\"pauseBefore\":0,\"waitFor\":5000,\"pauseAfter\":0,\"variableList\":[{\"value\":\"Visible\",\"inputId\":3,\"templateId\":0,\"inputName\":\"condition\",\"inputDescription\":\"A condition to wait for such as Visible, Clickable, etc.\",\"inputData\":\"Clickable,Invisible,Present,Selected,Visible,Frame Exists,Clickable then Click\",\"inputTypeId\":10,\"inputRequired\":1,\"status\":1,\"changed\":false},{\"value\":\"27861.2492\",\"inputId\":4,\"templateId\":0,\"inputName\":\"targetLocator\",\"inputDescription\":\"The element that will accept the action\",\"inputData\":\"null\",\"inputTypeId\":5,\"inputRequired\":1,\"status\":1,\"changed\":false},{\"value\":\"8000\",\"inputId\":5,\"templateId\":0,\"inputName\":\"timeOut\",\"inputDescription\":\"The amount of time to wait for the element to appear in seconds\",\"inputData\":\"null\",\"inputTypeId\":2,\"inputRequired\":1,\"status\":1,\"changed\":false}],\"functionVariables\":[],\"status\":1,\"actionId\":11,\"parentId\":0,\"endpointId\":1,\"templateId\":0,\"tversion\":1,\"tstyleId\":1,\"tstatus\":1,\"verifiedBy\":0,\"onFailure\":1,\"invertResult\":false,\"actionDisplay\":\"Wait for {var:targetLocator} to be {var:condition}\",\"changed\":false}", stepStack.peek(), (t4) -> {  return null; }, false, 0, 5000, 0, 1 ) );
       
       vM.clear();
 
