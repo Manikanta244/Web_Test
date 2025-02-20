@@ -363,6 +363,32 @@ bC.add( new ByFactory( ByXPath.class, "/body[1]/div[1]/div[1]/div[1]/div[2]/div[
 
 
 objectMap.put( "27925.1307", bC );
+
+
+bC = new ByFactoryCollection("1-1", "28277.2771", "");
+bC.add( new ByFactory( ByXPath.class, "//div[@style='font-family: var(--otp-font-family) var(--otp-font-weight); font-size: 10px; color: var(--otp-border-default);']/input[1]", "ParentRule[AttributeRule]", "28277.2773", "" ) );
+bC.add( new ByFactory( ByXPath.class, "//*[@style='font-family: var(--otp-font-family) var(--otp-font-weight); font-size: 10px; color: var(--otp-border-default);']/input[1]", "ParentRule[AttributeRule]", "28277.2775", "" ) );
+bC.add( new ByFactory( ByXPath.class, "(//input[@type='text'])[1]", "IndexedAttributeRule", "28277.2777", "" ) );
+bC.add( new ByFactory( ByXPath.class, "(//input[@maxlength='1'])[1]", "IndexedAttributeRule", "28277.2779", "" ) );
+bC.add( new ByFactory( ByXPath.class, "(//input[@value='1'])[1]", "IndexedAttributeRule", "28277.2781", "" ) );
+bC.add( new ByFactory( ByXPath.class, "(//input[@style='width: var(--otp-single-container-width); height: var(--otp-single-container-height); border-radius: var(--otp-border-radius); margin-top: var(--otp-top-margin); margin-left: var(--otp-left-margin); margin-right: var(--otp-right-margin); margin-bottom: var(--otp-bottom-margin); text-align: center; font-family: var(--otp-font-family) var(--otp-font-weight); font-size: var(--otp-font-size); border-color: var(--otp-border-default); border-top-style: ; border-top-width: ; border-right-style: ; border-right-width: ; border-bottom-style: ; border-bottom-width: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; color: var(--otp-border-default);'])[1]", "IndexedAttributeRule", "28277.2783", "" ) );
+bC.add( new ByFactory( ByXPath.class, "/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/input[1]", "AbsoluteRule", "28277.2785", "" ) );
+
+
+objectMap.put( "28277.2771", bC );
+
+
+bC = new ByFactoryCollection("1-1", "28277.2771", "");
+bC.add( new ByFactory( ByXPath.class, "//div[@style='font-family: var(--otp-font-family) var(--otp-font-weight); font-size: 10px; color: var(--otp-border-default);']/input[1]", "ParentRule[AttributeRule]", "28277.2773", "" ) );
+bC.add( new ByFactory( ByXPath.class, "//*[@style='font-family: var(--otp-font-family) var(--otp-font-weight); font-size: 10px; color: var(--otp-border-default);']/input[1]", "ParentRule[AttributeRule]", "28277.2775", "" ) );
+bC.add( new ByFactory( ByXPath.class, "(//input[@type='text'])[1]", "IndexedAttributeRule", "28277.2777", "" ) );
+bC.add( new ByFactory( ByXPath.class, "(//input[@maxlength='1'])[1]", "IndexedAttributeRule", "28277.2779", "" ) );
+bC.add( new ByFactory( ByXPath.class, "(//input[@value='1'])[1]", "IndexedAttributeRule", "28277.2781", "" ) );
+bC.add( new ByFactory( ByXPath.class, "(//input[@style='width: var(--otp-single-container-width); height: var(--otp-single-container-height); border-radius: var(--otp-border-radius); margin-top: var(--otp-top-margin); margin-left: var(--otp-left-margin); margin-right: var(--otp-right-margin); margin-bottom: var(--otp-bottom-margin); text-align: center; font-family: var(--otp-font-family) var(--otp-font-weight); font-size: var(--otp-font-size); border-color: var(--otp-border-default); border-top-style: ; border-top-width: ; border-right-style: ; border-right-width: ; border-bottom-style: ; border-bottom-width: ; border-left-style: ; border-left-width: ; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; color: var(--otp-border-default);'])[1]", "IndexedAttributeRule", "28277.2783", "" ) );
+bC.add( new ByFactory( ByXPath.class, "/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/input[1]", "AbsoluteRule", "28277.2785", "" ) );
+
+
+objectMap.put( "28277.2771", bC );
 /* Page: default 
     
     */
